@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A7D7CC"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/volunteer_welcome2">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_editext"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_edit_traveltype"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/edit"
+                        app:layout_constraintStart_toEndOf="@+id/txt_traveltype"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_displacement" />
+
+                    <EditText
+                        android:id="@+id/txt_traveltype"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:hint="@string/travel_type"
+                        android:inputType="text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_displacement" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_displacement"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/edit"
+                        app:layout_constraintStart_toEndOf="@+id/txt_displacement"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_skills" />
+
+                    <EditText
+                        android:id="@+id/txt_displacement"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:hint="@string/possible_displacement"
+                        android:inputType="text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_skills" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_skill"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/edit"
+                        app:layout_constraintStart_toEndOf="@+id/txt_skills"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_availabilities3" />
+
+                    <EditText
+                        android:id="@+id/txt_skills"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:hint="@string/professional_skills"
+                        android:inputType="text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_availabilities3" />
+
+                    <EditText
+                        android:id="@+id/txt_availabilities3"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:hint="@string/action_availabilities"
+                        android:inputType="text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_mission_type" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_missions"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/edit"
+                        app:layout_constraintStart_toEndOf="@+id/txt_mission_type"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_action_areas" />
+
+                    <EditText
+                        android:id="@+id/txt_availabilities"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:hint="@string/action_availabilities"
+                        android:inputType="text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_mission_type" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_actionarea2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/edit"
+                        app:layout_constraintStart_toEndOf="@+id/txt_action_areas"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_psituation" />
+
+                    <EditText
+                        android:id="@+id/txt_mission_type"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:hint="@string/action_mission"
+                        android:inputType="text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_action_areas" />
+
+                    <TextView
+                        android:id="@+id/textView_psituation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/login_situation"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/txt_action_areas"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:hint="@string/action_area"
+                        android:inputType="text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_psituation" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_availabilities"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/edit"
+                        app:layout_constraintStart_toEndOf="@+id/txt_availabilities"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_mission_type" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/previous"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_traveltype" />
+
+                    <Button
+                        android:id="@+id/btn_situation_next"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/next"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/button5"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_traveltype" />
+
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="@string/cancel"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_situation_next" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</LinearLayout>

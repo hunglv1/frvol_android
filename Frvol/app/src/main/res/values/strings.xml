@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Frvol</string>
+    <string name="welcome_registration">Volunteer Registration</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="not_have_account">Don\'t have an account? Sign up</string>
+    <string name="privacy">Term and Privacy Policy</string>
+    <string name="txt_signin">Sign In</string>
+    <string name="welcome_registration0">You are about to complete the application form to apply to France Volunteer programme. The form has three parts:</string>
+    <string name="welcome_registration1">The first part concerns your personal information, this information is essential for your application</string>
+    <string name="welcome_registration2">The second part, you will have to fill out a role matching form and your professional skills</string>
+    <string name="welcome_registration3">Submit your application with your email and password to create volunteer candidate</string>
+    <string name="welcome_registration_btn_text">Start application</string>
+    <string name="welcome_registration_text1">Registration - Personal Information</string>
+    <string name="login_identifiers">Registration - Login Identifiers</string>
+    <string name="login_situation">Registration - Your Situations</string>
+    <string name="gender_list">Gender</string>
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string name="dob_title">Date of Birth</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="postal_code">Postal code</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="phone_number">Phone number</string>
+    <string name="email">Email</string>
+    <string name="email_confirmation">Email Confirmation</string>
+    <string name="password">Password</string>
+    <string name="password_confirmation">Password Confirmation</string>
+    <string name="text_condition">By clicking \'Sign Up\', you are agreeing our term and condition</string>
+    <string name="registration">Sign Up</string>
+    <string name="action_area">Select Action Areas</string>
+    <string name="action_mission">Select Mission Types</string>
+    <string name="action_availabilities">Select Availabilities</string>
+    <string name="professional_skills">Select Professional Skills</string>
+    <string name="possible_displacement">Select Possible Displacement</string>
+    <string name="travel_type">Select Travel Type</string>
+    <string name="profile">Profile</string>
+    <string name="event_list">Event List</string>
+    <string name="my_event">My Events</string>
+</resources>
