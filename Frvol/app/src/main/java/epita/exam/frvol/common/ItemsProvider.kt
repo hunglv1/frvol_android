@@ -35,4 +35,30 @@ object ItemsProvider {
         "Evening weekends",
         "Evening school holidays"
     )
+
+    val professionalSituations = arrayOf(
+        "Student or school",
+        "Non-working",
+        "Retirement",
+        "In professional activity",
+        "Job seeker",
+        "Other or not specified"
+    )
+
+    val possibleDisplacement = arrayOf(
+        "0-10 km",
+        "0-30 km",
+        "0-50 km",
+        "0-100 km",
+        "0-250 km",
+        "0-500 km",
+        "more than 500 km"
+    )
+
+    val travelTypes = arrayOf(
+        "By walk",
+        "By public transport",
+        "By car",
+        "Need driver"
+    )
 }

@@ -9,8 +9,40 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/login_header_background">
+        android:layout_height="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_back_menu"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/logout_icon2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView48"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/update_profile" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Personal Information"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/olympic1">
 
     </FrameLayout>
 
@@ -25,8 +57,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/custom_editext"
                 android:orientation="horizontal"
@@ -39,38 +71,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView_pi1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:text="@string/welcome_registration_text1"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
                     <EditText
                         android:id="@+id/edt_first_name"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:ems="10"
                         android:hint="@string/first_name"
                         android:inputType="text"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_pi1" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
                         android:id="@+id/edt_last_name"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:ems="10"
                         android:hint="@string/last_name"
                         android:inputType="text"
@@ -83,7 +101,7 @@
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:hint="@string/gender_list"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/edt_last_name">
@@ -114,7 +132,7 @@
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:ems="10"
                         android:hint="@string/address"
                         android:inputType="text"
@@ -181,9 +199,9 @@
 
                     <Button
                         android:id="@+id/btn_pi_cancel"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="80dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/custom_button_profile"
                         android:text="@string/cancel"
@@ -194,16 +212,42 @@
 
                     <Button
                         android:id="@+id/btn_pi_next"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="80dp"
                         android:background="@drawable/custom_button_profile"
-                        android:text="@string/next"
+                        android:text="@string/update"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        app:layout_constraintStart_toEndOf="@+id/btn_pi_cancel"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/edt_phone_number" />
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/update_situation"
+                        android:textColor="#218248"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_pi_cancel" />
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/update_identifications"
+                        android:textColor="#218248"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
