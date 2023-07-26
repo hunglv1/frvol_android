@@ -39,10 +39,22 @@
     <string name="action_area">Select Action Areas</string>
     <string name="action_mission">Select Mission Types</string>
     <string name="action_availabilities">Select Availabilities</string>
-    <string name="professional_skills">Select Professional Skills</string>
+    <string name="professional_skills">Select Professional Situations</string>
     <string name="possible_displacement">Select Possible Displacement</string>
     <string name="travel_type">Select Travel Type</string>
-    <string name="profile">Profile</string>
+    <string name="profile">My Profile</string>
+    <string name="edit_profile">Edit Profile</string>
     <string name="event_list">Event List</string>
+    <string name="event_detail">Event Detail</string>
     <string name="my_event">My Events</string>
+    <string name="start_date">Start date:</string>
+    <string name="end_date">End date</string>
+    <string name="mission_type">Mission Type:</string>
+    <string name="update">Update</string>
+    <string name="update_situation">Update Situations</string>
+    <string name="update_identifications">Update Identifications</string>
+    <string name="purpose">FranceVolunteer aims to: Connecting Communities, Helping the Homeless and Hungry, Preserving the Environment, Skills for Nonprofits, Animal Rescue and Welfare...</string>
+    <string name="reward_title">Volunteer points! Our way to say &quot;Thank you&quot;  for your contributions</string>
+    <string name="reward_points">Your available points: 320</string>
+    <string name="get_reward">You are eligible to be able to redeem your volunteer points for the rewards:</string>
 </resources>

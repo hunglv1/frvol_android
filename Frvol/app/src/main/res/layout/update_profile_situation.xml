@@ -9,8 +9,40 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:background="@drawable/volunteer_welcome2">
+        android:layout_height="60dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_back_menu"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/logout_icon2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView48"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/update_profile" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Situations"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/olympic1">
 
     </FrameLayout>
 
@@ -140,10 +172,9 @@
                         android:id="@+id/img_edit_actionarea2"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginTop="40dp"
                         android:background="@drawable/edit"
                         app:layout_constraintStart_toEndOf="@+id/txt_action_areas"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_psituation" />
+                        tools:layout_editor_absoluteY="77dp" />
 
                     <EditText
                         android:id="@+id/txt_mission_type"
@@ -157,31 +188,16 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txt_action_areas" />
 
-                    <TextView
-                        android:id="@+id/textView_psituation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:text="@string/login_situation"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
                     <EditText
                         android:id="@+id/txt_action_areas"
                         android:layout_width="310dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
                         android:ems="10"
                         android:hint="@string/action_area"
                         android:inputType="text"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_psituation" />
+                        tools:layout_editor_absoluteY="20dp" />
 
                     <ImageView
                         android:id="@+id/img_edit_availabilities"
@@ -199,7 +215,7 @@
                         android:layout_marginStart="33dp"
                         android:layout_marginTop="30dp"
                         android:background="@drawable/custom_button_profile"
-                        android:text="@string/previous"
+                        android:text="@string/cancel"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +228,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="30dp"
                         android:background="@drawable/custom_button_profile"
-                        android:text="@string/next"
+                        android:text="@string/update"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toEndOf="@+id/button5"
@@ -223,13 +239,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="30dp"
                         android:background="@drawable/custom_button_profile"
-                        android:text="@string/cancel"
+                        android:text="@string/update_identifications"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/btn_situation_next" />
 

@@ -2,81 +2,118 @@ package epita.exam.frvol
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import epita.exam.frvol.activities.HomeActivity
 import epita.exam.frvol.activities.RegistrationIntro
-import epita.exam.frvol.common.ItemsProvider
-import epita.exam.frvol.common.MultiChoiceDialog
+import android.util.Patterns
+import android.widget.EditText
+import epita.exam.frvol.interfaces.ApiService
+import epita.exam.frvol.models.LoginRequest
+import epita.exam.frvol.models.LoginResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import java.security.MessageDigest
+import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var imgDob: ImageView
-    private lateinit var txtDob: EditText
+    private val retrofit = Retrofit.Builder()
+        .baseUrl("http://francevolunteer.tam.name.vn:8081/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_main)
+//
+//        val btnSignIn = findViewById<Button>(R.id.button_sign_in)
+//        val tvSignup = findViewById<TextView>(R.id.tv_signup)
+//        val tvForgot = findViewById<TextView>(R.id.tv_forgot)
+//
+//        tvSignup.setOnClickListener {
+//            val intent = Intent(this, RegistrationIntro::class.java)
+//            startActivity(intent)
+//        }
+//
+//        btnSignIn.setOnClickListener {
+//            //val intent = Intent(this, HomeActivity::class.java)
+//            //startActivity(intent)
+//            val email = findViewById<EditText>(R.id.edit_text_email).text.toString().trim()
+//            val password = findViewById<EditText>(R.id.edit_text_password).text.toString().trim()
+//
+//            if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+//                // Invalid email format
+//                findViewById<EditText>(R.id.edit_text_email).error = "Invalid email"
+//                return@setOnClickListener
+//            }
+//
+//            if (password.isEmpty()) {
+//                // Empty password
+//                findViewById<EditText>(R.id.edit_text_password).error = "Password cannot be empty"
+//                return@setOnClickListener
+//            }
+//
+//            // Encrypt the password
+//            //val encryptedPassword = encryptPassword(password)
+//            val encryptedPassword = password
+//
+//            // Create the API service
+//            val apiService = retrofit.create(ApiService::class.java)
+//
+//            // Create the request body
+//            val request = LoginRequest(email, encryptedPassword)
+//
+//            // Make the API call
+//            val call = apiService.signIn(request)
+//
+//            // Handle the API response
+//            call.enqueue(object : Callback<LoginResponse> {
+//                override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+//                    if (response.isSuccessful) {
+//                        val loginResponse = response.body()
+//                        Log.d("API_RESPONSE", loginResponse.toString())
+//                        if (loginResponse != null && loginResponse.code == "200") {
+//                            val intent = Intent(this@MainActivity, HomeActivity::class.java)
+//                            val gson = Gson()
+//                            val jsonString = gson.toJson(loginResponse)
+//                            intent.putExtra("loginResponse", jsonString)
+//                            startActivity(intent)
+//                        } else {
+//                            Log.e("TAG", "3. Call Login api failed")
+//                        }
+//                    } else {
+//                        Log.e("TAG", "1. Call Login api failed")
+//                    }
+//                }
+//
+//                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+//                    Log.e("TAG", "2. Call Login api failed")
+//                }
+//            })
+//
+//
+//        }
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        //setContentView(R.layout.sign_up_intro)
-        //setContentView(R.layout.sign_up_identifiers)
-
-
-        val btnSignIn = findViewById<Button>(R.id.button_sign_in)
-        val tv_signup = findViewById<TextView>(R.id.tv_signup)
-        val tv_forgot = findViewById<TextView>(R.id.tv_forgot)
-
-        tv_signup.setOnClickListener {
-            val intent = Intent(this, RegistrationIntro::class.java)
-            startActivity(intent)
-        }
-
-
-
-
-//        setContentView(R.layout.sign_up_first)
-//
-//        val autotextView = findViewById<AutoCompleteTextView>(R.id.genders)
-//        val languages = resources.getStringArray(R.array.genders)
-//        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, languages)
-//        autotextView.setAdapter(adapter)
-//
-//        imgDob = findViewById<ImageView>(R.id.img_dob)
-//        txtDob = findViewById<EditText>(R.id.edt_dob)
-//        val myCalendar = Calendar.getInstance()
-//        val currentYear = myCalendar.get(Calendar.YEAR)
-//        val startYear = currentYear - 100
-//
-//        val datePicker = DatePickerDialog.OnDateSetListener { view, i, i2, i3 ->
-//            myCalendar.set(Calendar.YEAR, i)
-//            myCalendar.set(Calendar.MONDAY, i2)
-//            myCalendar.set(Calendar.DAY_OF_MONTH, i3)
-//            updateLabel(myCalendar)
-//        }
-//
-//        imgDob.setOnClickListener {
-//            val datePickerDialog = DatePickerDialog(
-//                this, datePicker, myCalendar.get(Calendar.YEAR),
-//                myCalendar.get(Calendar.MONTH),
-//                myCalendar.get(Calendar.DAY_OF_MONTH)
-//            )
-//
-//            // Set the minimum date to startYear
-//            datePickerDialog.datePicker.minDate = getMillisFromYearMonthDay(startYear, 0, 1)
-//            datePickerDialog.show()
-//        }
+        //setContentView(R.layout.event_detail)
+        //setContentView(R.layout.splash)
+        //setContentView(R.layout.activity_main)
+        setContentView(R.layout.event_list1)
+        //setContentView(R.layout.rewards)
     }
 
-//    private fun updateLabel(myCalendar: Calendar) {
-//        val myFormat = "dd-MM-yyyy"
-//        val sdf = SimpleDateFormat(myFormat, Locale.UK)
-//        txtDob.setText(sdf.format(myCalendar.time))
-//    }
-//
-//    private fun getMillisFromYearMonthDay(year: Int, month: Int, dayOfMonth: Int): Long {
-//        val calendar = Calendar.getInstance()
-//        calendar.set(year, month, dayOfMonth, 0, 0, 0)
-//        return calendar.timeInMillis
-//    }
+    private fun encryptPassword(password: String): String {
+        val digest = MessageDigest.getInstance("SHA-256")
+        val hash = digest.digest(password.toByteArray())
+        return hash.joinToString("") {
+            "%02x".format(it)
+        }
+    }
+
 }
